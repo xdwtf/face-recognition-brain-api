@@ -22,5 +22,7 @@
   "devDependencies": {
     "nodemon": "^2.0.14"
   },
-  "description": ""
+  "peerDependencies": {
+    "parse": "^2.1.0"
+  }
 }
