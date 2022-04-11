@@ -1,5 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser'); // latest version of exressJS now comes with Body-Parser!
+// Require parse if undefined for the promise
+if (typeof Parse == 'undefined') {
+  Parse = require('parse').Parse;
+}
 const urlencodedParser = parser.urlencoded({extended : false});
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
