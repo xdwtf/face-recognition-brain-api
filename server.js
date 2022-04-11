@@ -4,7 +4,7 @@ const bodyParser = require('body-parser'); // latest version of exressJS now com
 if (typeof Parse == 'undefined') {
   Parse = require('parse').Parse;
 }
-const urlencodedParser = parser.urlencoded({extended : false});
+// const urlencodedParser = parser.urlencoded({extended : false});
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex')
@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 
 // before your routes
 app.use(parser .json());
-app.use(urlencodedParser) // This will parse your body and make it available for your routes to use
+// app.use(urlencodedParser) // This will parse your body and make it available for your routes to use
 app.get('/', (req, res) => {res.send('it is working!')})
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt)})
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt)})
