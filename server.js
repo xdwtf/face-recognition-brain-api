@@ -37,7 +37,7 @@ app.use((req, res, next) => {
 });
 
 // before your routes
-app.use(parser .json());
+app.use(parser.json());
 // app.use(urlencodedParser) // This will parse your body and make it available for your routes to use
 app.get('/', (req, res) => {res.send('it is working!')})
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt)})
